@@ -1,0 +1,95 @@
+@import url(adaptive.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --color-text: #cdc6c3;
+    --color-icon: #9a9492;
+}
+
+@font-face {
+    font-family: "raleway-c";
+    src: url(../fonts/raleway-regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "sedoe-c";
+    src: url(../fonts/SegoeUI.woff2) format("woff2");
+}
+
+.main {
+    height: 100vh;
+}
+
+.header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.position {
+    font-family: "raleway-c";
+    color: var(--color-text);
+    font-size: calc(var(--index)*2)
+}
+
+.info {
+    font-family: "raleway-c";
+    color: var(--color-text);
+    margin-top: calc(var(--index)*19);
+    position: absolute;
+    font-size: calc(var(--index))
+}
+
+.postfix {
+    display: inline-block;
+    position: absolute;
+    margin-top: calc(var(--index)*23);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    max-width: 130px;
+    padding-left: 50px;
+    padding-right: 50px;
+    color: var(--color-text);
+}
+
+.text {
+    font-family: "raleway-c";
+    color: var(--color-text);
+    font-size: calc(var(--index)/1.8);
+}
+
+.copyright {
+    position: absolute;
+    margin-top: calc(var(--index)*32);
+    font-family: "sedoe-c";
+    color: var(--color-text);
+    font-size: calc(var(--index)/1.8);
+    opacity: 0.4;
+}
+
+a {
+    color: var(--color-text);
+    text-decoration: none
+}
+
+.margin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:var(--color-text);
+}
+
