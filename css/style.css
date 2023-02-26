@@ -9,7 +9,7 @@
 :root {
     --index: calc(1vw + 1vh);
     --color-text: #cdc6c3;
-    --color-icon: #9a9492;
+    --color-icon: #cdc6c3;
 }
 
 @font-face {
@@ -34,29 +34,28 @@
     text-align: center;
     overflow: hidden;
     position: relative;
+    flex-flow: column;
 }
 
 .position {
     font-family: "raleway-c";
     color: var(--color-text);
-    font-size: calc(var(--index)*2)
+    font-size: 50px;
+    position: absolute;
 }
 
 .info {
     font-family: "raleway-c";
     color: var(--color-text);
-    margin-top: calc(var(--index)*19);
-    position: absolute;
-    font-size: calc(var(--index))
+    font-size: 30px;
+    padding-top: 450px;
 }
 
 .postfix {
-    display: inline-block;
-    position: absolute;
-    margin-top: calc(var(--index)*23);
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 15px;
 }
 
 .icon {
@@ -69,16 +68,16 @@
 .text {
     font-family: "raleway-c";
     color: var(--color-text);
-    font-size: calc(var(--index)/1.8);
+    font-size: 15px;
 }
 
 .copyright {
     position: absolute;
-    margin-top: calc(var(--index)*32);
     font-family: "sedoe-c";
     color: var(--color-text);
     font-size: calc(var(--index)/1.8);
     opacity: 0.4;
+    bottom: 15px;
 }
 
 a {
@@ -93,3 +92,73 @@ a {
     color:var(--color-text);
 }
 
+#zatemnenie {
+    background: rgba(0, 0, 0, 0.575);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#okno {
+    width: 75%;
+    height: 75%;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #ffffff17;
+    border-radius: 5px;
+    color: #b8b8b8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(0, 0, 0);
+    font-family: raleway-c;
+}
+
+#zatemnenie:target {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    display: block;
+    border: 1px solid #61616159;
+    color: #969697;
+    padding: 0 12px;
+    margin: auto;
+    background: #070707;
+    font-size: 14pt;
+    cursor: pointer;
+    font-family: 'raleway-c';
+    border-radius: 15px;
+    bottom: 15px;
+    left: 50%;
+    margin: 0 0 0 -37px;
+}
+
+.close:hover {
+    background: #3d3d3d;
+    color: aliceblue;
+}
+
+#about {
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+#touch {
+    margin: 0;
+    font-size: 15px;
+    color: #6d6d6d52;
+    font-family: raleway-c;
+}
+
+.dota {
+    max-width: calc(var(--index)*60);
+    max-height: calc(var(--index)*5);
+}
